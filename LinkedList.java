@@ -13,7 +13,7 @@ class LinkedList{           //defining linked list class
         this.head = null;   //initially head will be null - even if it is not passed, constructer creates head as null
     }   
 
-
+/* 
 public void addNode(int data){          //method to add node at the end of the linked list
     Node newNode = new Node(data);      //creating new node
     if(head==null){                     //if linked list is empty
@@ -27,6 +27,21 @@ public void addNode(int data){          //method to add node at the end of the l
         current.next = newNode;        //add new node at the end of the linked list
     } 
 }
+*/
+//adding node at the beginning of the linked list
+
+public void addNode(int data){
+    Node newNode = new Node(data);
+
+    if(head == null){
+        head = newNode;
+    }
+    else{
+        newNode.next = head;
+        head = newNode;
+    }
+    }
+
 
 public void display(){                          //method to display the linked list
     Node current = head;                        //start from the head
